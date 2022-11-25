@@ -1,5 +1,5 @@
 {
-  "name": "berthott/laravel-targetabel",
+  "name": "berthott/laravel-targetable",
   "description": "Laravel Helper for targeting classes by their traits",
   "license": "MIT",
   "authors": [
