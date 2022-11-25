@@ -1,0 +1,36 @@
+{
+  "name": "berthott/laravel-targetabel",
+  "description": "Laravel Helper for targeting classes by their traits",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Jan Bladt",
+          "email": "berthott@web.de"
+      }
+  ],
+  "autoload" : {
+      "psr-4" : {
+          "berthott\\Targetable\\": "src"
+      }
+  },
+  "autoload-dev": {
+      "psr-4": {
+          "berthott\\Targetable\\Tests\\": "tests"
+      }
+  },
+  "extra" : {
+      "laravel" : {
+          "providers" : [
+              "berthott\\Crudable\\CrudableServiceProvider"
+          ]
+      }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.0",
+    "phpunit/phpunit": "^9.5",
+    "doctrine/dbal": "^3.3"
+  },
+  "require": {
+    "haydenpierce/class-finder": "^0.4.3"
+  }
+}
