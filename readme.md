@@ -83,8 +83,8 @@ return [
 
 ## Compatibility
 
-Tested with Laravel 9.x.
+Tested with Laravel 10.x.
 
 ## License
 
-See [License File](license.md). Copyright © 2022 Jan Bladt.
+See [License File](license.md). Copyright © 2023 Jan Bladt.
