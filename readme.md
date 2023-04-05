@@ -27,6 +27,7 @@ class TestService extends TargetableService
 ```
 
 * For further details on possibilities on how to utilize this service have a look inside `tests/BasicTargetable`
+* You might use an interface instead of a trait by using `Mode::Contract` as a 3rd argument on TargetableService
 
 ## Options
 

@@ -2,6 +2,7 @@
 
 namespace berthott\Targetable\Services;
 
+use berthott\Targetable\Enums\Mode;
 use HaydenPierce\ClassFinder\ClassFinder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -23,7 +24,7 @@ abstract class TargetableService
     /**
      * The trait that should be targeted.
      */
-    private string $targetTrait;
+    private string $targetClass;
 
     /**
      * Collection with all targetable classes.
@@ -31,12 +32,18 @@ abstract class TargetableService
     private Collection $targetables;
 
     /**
+     * The mode in which the targetable operates.
+     */
+    private Mode $mode;
+
+    /**
      * The Constructor.
      */
-    public function __construct(string $targetTrait, string $configKey)
+    public function __construct(string $targetClass, string $configKey, Mode $mode = Mode::Trait)
     {
-        $this->targetTrait = $targetTrait;
+        $this->targetClass = $targetClass;
         $this->configKey = $configKey;
+        $this->mode = $mode;
         $this->cacheKey = get_class($this).'-Cache-Key';
         $this->initTargetableClasses();
     }
@@ -52,15 +59,15 @@ abstract class TargetableService
     /**
      * Initialize the targetable classes collection.
      */
-    private function initTargetableClasses(): void
+    private function initTargetableClasses()
     {
         $this->targetables = Cache::sear($this->cacheKey, function () {
             $targetables = [];
             $namespaces = config($this->configKey.'.namespace', 'App\Models');
             foreach (is_array($namespaces) ? $namespaces : [$namespaces] as $namespace) {
                 foreach (ClassFinder::getClassesInNamespace($namespace, config($this->configKey.'namespace_mode', ClassFinder::STANDARD_MODE)) as $class) {
-                    foreach (class_uses_recursive($class) as $trait) {
-                        if ($this->targetTrait == $trait) {
+                    foreach ($this->mode === Mode::Trait ? class_uses_recursive($class) : class_implements($class) as $trait) {
+                        if ($this->targetClass == $trait) {
                             array_push($targetables, $class);
                         }
                     }
