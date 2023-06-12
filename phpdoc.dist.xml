@@ -12,5 +12,10 @@
                 <path>src</path>
             </source>
         </api>
+        <guide format="md">
+          <source dsn=".">
+            <path>.</path>
+          </source>
+        </guide>
     </version>
 </phpdocumentor>
