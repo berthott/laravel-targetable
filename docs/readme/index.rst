@@ -6,9 +6,10 @@ Laravel Helper for targeting classes by their traits.
 Installation
 ------------
 
-```
-$ composer require berthott/laravel-targetable
-```
+.. code-block::
+
+    $ composer require berthott/laravel-targetable
+
 
 Usage
 -----
@@ -16,7 +17,7 @@ Usage
 * Create your own service inheriting `berthott\Targetable\Services\TargetableService`
 * Pass the trait you want to target, and the config name you chose
 
-```
+.. code-block:: php
 class TestService extends TargetableService
 {
     public function __construct()
@@ -24,7 +25,7 @@ class TestService extends TargetableService
         parent::__construct(YourTrait::class, 'your-config');
     }
 }
-```
+
 
 * For further details on possibilities on how to utilize this service have a look inside `tests/BasicTargetable`
 * You might use an interface instead of a trait by using `Mode::Contract` as a 3rd argument on TargetableService
@@ -38,7 +39,8 @@ To change the default options add the following options to your config:
 * `prefix`: route prefix. Defaults to `api`
 
 Your config might look like this:
-```
+
+.. code-block:: php
 <?php
 
 use HaydenPierce\ClassFinder\ClassFinder;
@@ -81,7 +83,6 @@ return [
 
     'prefix' => 'api',
 ];
-```
 
 Compatibility
 -------------
