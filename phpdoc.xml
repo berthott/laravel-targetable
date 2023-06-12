@@ -12,7 +12,7 @@
                 <path>src</path>
             </source>
         </api>
-        <guide format="md">
+        <guide format="rst">
           <source dsn=".">
             <path>docs</path>
           </source>
