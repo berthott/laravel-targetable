@@ -49,7 +49,9 @@ abstract class TargetableService
     }
 
     /**
-     * Get the crudable classes collection.
+     * Get the targetable classes collection.
+     * 
+     * Returns the collection of all classes that use a the target class / trait.
      */
     public function getTargetableClasses(): Collection
     {
@@ -78,7 +80,9 @@ abstract class TargetableService
     }
 
     /**
-     * Get the target model.
+     * Get the target model for the current request.
+     * 
+     * Analyzes the current request route and returns the matching target class.
      */
     public function getTarget(): string
     {

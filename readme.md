@@ -10,15 +10,12 @@ $ composer require berthott/laravel-targetable
 
 ## Usage
 
-* Create your own Service inheriting `berthott\Targetable\Services\TargetableService`
+* Create your own service inheriting `berthott\Targetable\Services\TargetableService`
 * Pass the trait you want to target, and the config name you chose
 
 ```php
 class TestService extends TargetableService
 {
-    /**
-     * The Constructor.
-     */
     public function __construct()
     {
         parent::__construct(YourTrait::class, 'your-config');
