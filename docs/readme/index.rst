@@ -10,12 +10,11 @@ Installation
 
     $ composer require berthott/laravel-targetable
 
-
 Usage
 -----
 
-* Create your own service inheriting `berthott\Targetable\Services\TargetableService`
-* Pass the trait you want to target, and the config name you chose
+- Create your own service inheriting `berthott\Targetable\Services\TargetableService`
+- Pass the trait you want to target, and the config name you chose
 
 .. code-block:: php
     class TestService extends TargetableService
@@ -26,17 +25,16 @@ Usage
         }
     }
 
-
-* For further details on possibilities on how to utilize this service have a look inside `tests/BasicTargetable`
-* You might use an interface instead of a trait by using `Mode::Contract` as a 3rd argument on TargetableService
+- For further details on possibilities on how to utilize this service have a look inside `tests/BasicTargetable`
+- You might use an interface instead of a trait by using `Mode::Contract` as a 3rd argument on TargetableService
 
 Options
 -------
 
 To change the default options add the following options to your config:
-* `namespace`: string or array with one ore multiple namespaces that should be monitored for the Crudable-Trait. Defaults to `App\Models`.
-* `namespace_mode`: Defines the search mode for the namespaces. `ClassFinder::STANDARD_MODE` will only find the exact matching namespace, `ClassFinder::RECURSIVE_MODE` will find all subnamespaces. Defaults to `ClassFinder::STANDARD_MODE`.
-* `prefix`: route prefix. Defaults to `api`
+- `namespace`: string or array with one ore multiple namespaces that should be monitored for the Crudable-Trait. Defaults to `App\Models`.
+- `namespace_mode`: Defines the search mode for the namespaces. `ClassFinder::STANDARD_MODE` will only find the exact matching namespace, `ClassFinder::RECURSIVE_MODE` will find all subnamespaces. Defaults to `ClassFinder::STANDARD_MODE`.
+- `prefix`: route prefix. Defaults to `api`
 
 Your config might look like this:
 
