@@ -14,7 +14,7 @@
         </api>
         <guide format="rst">
           <source dsn=".">
-            <path>docs</path>
+            <path>READMEFOLDER</path>
           </source>
           <output>guide</output>
         </guide>
