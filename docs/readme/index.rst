@@ -18,13 +18,13 @@ Usage
 * Pass the trait you want to target, and the config name you chose
 
 .. code-block:: php
-class TestService extends TargetableService
-{
-    public function __construct()
+    class TestService extends TargetableService
     {
-        parent::__construct(YourTrait::class, 'your-config');
+        public function __construct()
+        {
+            parent::__construct(YourTrait::class, 'your-config');
+        }
     }
-}
 
 
 * For further details on possibilities on how to utilize this service have a look inside `tests/BasicTargetable`
@@ -41,48 +41,48 @@ To change the default options add the following options to your config:
 Your config might look like this:
 
 .. code-block:: php
-<?php
+    <?php
 
-use HaydenPierce\ClassFinder\ClassFinder;
+    use HaydenPierce\ClassFinder\ClassFinder;
 
-return [
+    return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Model Namespace Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Defines one or multiple model namespaces.
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | Model Namespace Configuration
+        |--------------------------------------------------------------------------
+        |
+        | Defines one or multiple model namespaces.
+        |
+        */
 
-    'namespace' => 'App\Models',
+        'namespace' => 'App\Models',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Model Namespace Search Option
-    |--------------------------------------------------------------------------
-    |
-    | Defines the search mode for the namespaces. ClassFinder::STANDARD_MODE
-    | will only find the exact matching namespace, ClassFinder::RECURSIVE_MODE
-    | will find all subnamespaces. Beware: ClassFinder::RECURSIVE_MODE might 
-    | cause some testing issues.
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | Model Namespace Search Option
+        |--------------------------------------------------------------------------
+        |
+        | Defines the search mode for the namespaces. ClassFinder::STANDARD_MODE
+        | will only find the exact matching namespace, ClassFinder::RECURSIVE_MODE
+        | will find all subnamespaces. Beware: ClassFinder::RECURSIVE_MODE might 
+        | cause some testing issues.
+        |
+        */
 
-    'namespace_mode' => ClassFinder::STANDARD_MODE,
+        'namespace_mode' => ClassFinder::STANDARD_MODE,
 
-    /*
-    |--------------------------------------------------------------------------
-    | API Prefix
-    |--------------------------------------------------------------------------
-    |
-    | Defines the api prefix.
-    |
-    */
+        /*
+        |--------------------------------------------------------------------------
+        | API Prefix
+        |--------------------------------------------------------------------------
+        |
+        | Defines the api prefix.
+        |
+        */
 
-    'prefix' => 'api',
-];
+        'prefix' => 'api',
+    ];
 
 Compatibility
 -------------
