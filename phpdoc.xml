@@ -13,8 +13,8 @@
             </source>
         </api>
         <guide format="rst">
-          <source dsn=".">
-            <path>READMEFOLDER</path>
+          <source dsn="READMEFOLDER">
+            <path>docs</path>
           </source>
           <output>guide</output>
         </guide>
