@@ -16,6 +16,7 @@
           <source dsn=".">
             <path>docs</path>
           </source>
+          <output>guide</output>
         </guide>
     </version>
 </phpdocumentor>
