@@ -13,9 +13,4 @@
             </source>
         </api>
     </version>
-    <guide format="md">
-      <source dsn=".">
-      </source>
-      <output>docs</output>
-    </guide>
 </phpdocumentor>
