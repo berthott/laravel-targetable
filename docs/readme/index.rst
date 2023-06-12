@@ -1,19 +1,22 @@
-# Laravel-Targetable
+Laravel-Targetable
+==================
 
 Laravel Helper for targeting classes by their traits.
 
-## Installation
+Installation
+------------
 
 ```
 $ composer require berthott/laravel-targetable
 ```
 
-## Usage
+Usage
+-----
 
 * Create your own service inheriting `berthott\Targetable\Services\TargetableService`
 * Pass the trait you want to target, and the config name you chose
 
-```php
+```
 class TestService extends TargetableService
 {
     public function __construct()
@@ -26,7 +29,8 @@ class TestService extends TargetableService
 * For further details on possibilities on how to utilize this service have a look inside `tests/BasicTargetable`
 * You might use an interface instead of a trait by using `Mode::Contract` as a 3rd argument on TargetableService
 
-## Options
+Options
+-------
 
 To change the default options add the following options to your config:
 * `namespace`: string or array with one ore multiple namespaces that should be monitored for the Crudable-Trait. Defaults to `App\Models`.
@@ -34,7 +38,7 @@ To change the default options add the following options to your config:
 * `prefix`: route prefix. Defaults to `api`
 
 Your config might look like this:
-```php
+```
 <?php
 
 use HaydenPierce\ClassFinder\ClassFinder;
@@ -79,10 +83,12 @@ return [
 ];
 ```
 
-## Compatibility
+Compatibility
+-------------
 
 Tested with Laravel 10.x.
 
-## License
+License
+-------
 
 See [License File](license.md). Copyright © 2023 Jan Bladt.
