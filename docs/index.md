@@ -1,11 +1,3 @@
-.. meta::
-   :layout: landingpage
+# Documentation
 
-.. toctree::
-   :hidden:
-   :titlesonly:
-
-   readme/index
-
-Documentation
-=============
+[Readme] {readme/index.md}
