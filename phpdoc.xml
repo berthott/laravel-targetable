@@ -14,7 +14,7 @@
         </api>
         <guide format="md">
           <source dsn=".">
-            <path>test</path>
+            <path>docs</path>
           </source>
         </guide>
     </version>
