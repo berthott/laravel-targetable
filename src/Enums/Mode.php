@@ -13,7 +13,7 @@ namespace berthott\Targetable\Enums;
  * 
  * @api
  * @link https://syspons.com
- * @see [berthott\Targetable\Services\TargetableService]
+ * @see [TargetableService::__constructor()]
  */
 enum Mode
 {
