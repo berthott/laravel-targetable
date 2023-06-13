@@ -29,6 +29,7 @@ class TestService extends TargetableService
 ## Options
 
 To change the default options add the following options to your config:
+
 * **namespace**: string or array with one ore multiple namespaces that should be monitored for the Crudable-Trait. Defaults to `App\Models`.
 * **namespace_mode**: Defines the search mode for the namespaces. `ClassFinder::STANDARD_MODE` will only find the exact matching namespace, `ClassFinder::RECURSIVE_MODE` will find all subnamespaces. Defaults to `ClassFinder::STANDARD_MODE`.
 * **prefix**: route prefix. Defaults to `api`
