@@ -12,6 +12,8 @@ namespace berthott\Targetable\Enums;
  * * **Contract** checks if the given contract is implemented by the class
  * 
  * @api
+ * @link https://syspons.com
+ * @see [TargetableService::__constructor]
  */
 enum Mode
 {
