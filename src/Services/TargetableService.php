@@ -42,7 +42,7 @@ abstract class TargetableService
     /**
      * The constructor should be called by its descending class.
      * 
-     * For more information see {@see /guide/readme/index [the Readme]}.
+     * For more information see {@see doc://readme/index [the Readme]}.
      * 
      * @api
      * @param string    $targetClass    The class that will be targeted.
