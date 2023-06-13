@@ -42,7 +42,7 @@ abstract class TargetableService
     /**
      * The constructor should be called by its descending class.
      * 
-     * For more information see {@link /guide/readme/index.html [the Readme]}.
+     * For more information see {@link laravel-targetable/guide/readme/index.html the readme page}.
      * 
      * @api
      * @param string    $targetClass    The class that will be targeted.
