@@ -47,8 +47,8 @@ abstract class TargetableService
      * @api
      * @param string    $targetClass    The class that will be targeted.
      * @param string    $configKey      The name of the config file.
-     * @param Mode      $mod            The mode for finding the target.
-     * @return void
+     * @param Mode      $mode            The mode for finding the target.
+     * @return self
      */
     public function __construct(string $targetClass, string $configKey, Mode $mode = Mode::Trait)
     {
