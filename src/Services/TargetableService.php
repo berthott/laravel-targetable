@@ -42,12 +42,12 @@ abstract class TargetableService
     /**
      * The constructor should be called by its descending class.
      * 
-     * For more information see {@see doc://guide/readme/index the Readme}.
+     * For more information see {@see /guide/readme/index [the Readme]}.
      * 
      * @api
-     * @param string    $targetClass        The class that will be targeted.
-     * @param string    $configKey          The name of the config file.
-     * @param Mode      $mode = Mode::Trait The mode for finding the target.
+     * @param string    $targetClass    The class that will be targeted.
+     * @param string    $configKey      The name of the config file.
+     * @param Mode      $mod            The mode for finding the target.
      * @return void
      */
     public function __construct(string $targetClass, string $configKey, Mode $mode = Mode::Trait)
