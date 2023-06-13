@@ -9,6 +9,9 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 
+/**
+ * Abstract class to be overwritten.
+ */
 abstract class TargetableService
 {
     /**
@@ -37,7 +40,12 @@ abstract class TargetableService
     private Mode $mode;
 
     /**
-     * The Constructor.
+     * The constructor should be called by its descendent with the providing **target** 
+     * class, which can be either a Trait or a Contract (@see Mode).
+     * 
+     * For more information see @see doc://readme
+     * 
+     * @api
      */
     public function __construct(string $targetClass, string $configKey, Mode $mode = Mode::Trait)
     {
@@ -52,6 +60,8 @@ abstract class TargetableService
      * Get the targetable classes collection.
      * 
      * Returns the collection of all classes that use a the target class / trait.
+     * 
+     * @api
      */
     public function getTargetableClasses(): Collection
     {
@@ -83,6 +93,8 @@ abstract class TargetableService
      * Get the target model for the current request.
      * 
      * Analyzes the current request route and returns the matching target class.
+     * 
+     * @api
      */
     public function getTarget(): string
     {
