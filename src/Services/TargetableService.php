@@ -43,7 +43,7 @@ abstract class TargetableService
      * The constructor.
      * 
      * The constructor should be called by its descendent with the providing **target** 
-     * class, which can be either a Trait or a Contract (see {@see berthott\Targetable\Enums\Mode}).
+     * class, which can be either a Trait or a Contract (see {@see \berthott\Targetable\Enums\Mode}).
      * 
      * For more information see {@see doc://readme}
      * 
