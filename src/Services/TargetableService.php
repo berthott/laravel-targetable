@@ -97,7 +97,7 @@ abstract class TargetableService
      * Analyzes the current request route and returns the matching target class.
      * 
      * @api
-     * @return The target class of the current request.
+     * @return string The target class of the current request.
      */
     public function getTarget(): string
     {
