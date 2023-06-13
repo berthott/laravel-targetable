@@ -40,15 +40,15 @@ abstract class TargetableService
     private Mode $mode;
 
     /**
-     * The constructor.
+     * The constructor should be called by its descending class.
      * 
-     * The constructor should be called by its descendent with the providing **target** 
-     * class, which can be either a Trait or a Contract (see {@see \berthott\Targetable\Enums\Mode}).
-     * 
-     * For more information see {@see doc://readme}
+     * For more information see {@see doc://guide/readme/index the Readme}.
      * 
      * @api
-     * @param string    $targetClass    The class that will be targeted.
+     * @param string    $targetClass        The class that will be targeted.
+     * @param string    $configKey          The name of the config file.
+     * @param Mode      $mode = Mode::Trait The mode for finding the target.
+     * @return void
      */
     public function __construct(string $targetClass, string $configKey, Mode $mode = Mode::Trait)
     {
