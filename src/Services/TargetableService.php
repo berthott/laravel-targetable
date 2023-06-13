@@ -48,8 +48,7 @@ abstract class TargetableService
      * For more information see {@see doc://readme}
      * 
      * @api
-     * @param $targetClass string The class that will be targeted.
-     * @return void
+     * @param string    $targetClass    The class that will be targeted.
      */
     public function __construct(string $targetClass, string $configKey, Mode $mode = Mode::Trait)
     {
