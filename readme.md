@@ -28,11 +28,11 @@ class TestService extends TargetableService
 
 ## Options
 
-To change the default options add the following options to your config:
+To change the default options add the following options to your librarys config file:
 
-* `namespace`: string or array with one ore multiple namespaces that should be monitored for the Crudable-Trait. Defaults to `App\Models`.
+* `namespace`: String or array with one ore multiple namespaces that should be monitored for the configured trait. Defaults to `App\Models`.
 * `namespace_mode`: Defines the search mode for the namespaces. `ClassFinder::STANDARD_MODE` will only find the exact matching namespace, `ClassFinder::RECURSIVE_MODE` will find all subnamespaces. Defaults to `ClassFinder::STANDARD_MODE`.
-* `prefix`: route prefix. Defaults to `api`
+* `prefix`: Defines the route prefix. Defaults to `api`.
 
 Your config might look like this:
 ```php
@@ -47,7 +47,8 @@ return [
     | Model Namespace Configuration
     |--------------------------------------------------------------------------
     |
-    | Defines one or multiple model namespaces.
+    | string or array with one ore multiple namespaces that should be monitored 
+    | for the configured trait. Defaults to App\Models.
     |
     */
 
@@ -60,8 +61,9 @@ return [
     |
     | Defines the search mode for the namespaces. ClassFinder::STANDARD_MODE
     | will only find the exact matching namespace, ClassFinder::RECURSIVE_MODE
-    | will find all subnamespaces. Beware: ClassFinder::RECURSIVE_MODE might 
-    | cause some testing issues.
+    | will find all subnamespaces. Defaults to ClassFinder::STANDARD_MODE.
+    | 
+    | Beware: ClassFinder::RECURSIVE_MODE might cause some testing issues.
     |
     */
 
@@ -69,10 +71,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | API Prefix
+    | Route Prefix
     |--------------------------------------------------------------------------
     |
-    | Defines the api prefix.
+    | Defines the route prefix. Defaults to 'api'.
     |
     */
 
