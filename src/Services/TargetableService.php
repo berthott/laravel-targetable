@@ -79,7 +79,7 @@ abstract class TargetableService
             $targetables = [];
             $namespaces = config($this->configKey.'.namespace', 'App\Models');
             foreach (is_array($namespaces) ? $namespaces : [$namespaces] as $namespace) {
-                foreach (ClassFinder::getClassesInNamespace($namespace, config($this->configKey.'namespace_mode', ClassFinder::STANDARD_MODE)) as $class) {
+                foreach (ClassFinder::getClassesInNamespace($namespace, config($this->configKey.'.namespace_mode', ClassFinder::STANDARD_MODE)) as $class) {
                     foreach ($this->mode === Mode::Trait ? class_uses_recursive($class) : class_implements($class) as $trait) {
                         if ($this->targetClass == $trait) {
                             array_push($targetables, $class);
