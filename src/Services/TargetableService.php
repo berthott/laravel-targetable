@@ -30,14 +30,14 @@ abstract class TargetableService
     private string $targetClass;
 
     /**
-     * Collection with all targetable classes.
-     */
-    private Collection $targetables;
-
-    /**
      * The mode in which the targetable operates.
      */
     private Mode $mode;
+
+    /**
+     * Collection with all targetable classes.
+     */
+    protected Collection $targetables;
 
     /**
      * The constructor should be called by its descending class.
