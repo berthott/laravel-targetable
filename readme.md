@@ -1,3 +1,5 @@
+![test workflow](https://github.com/berthott/laravel-targetable/actions/workflows/test.yml/badge.svg)
+
 # Laravel-Targetable
 
 Laravel Helper for targeting classes by their traits.
